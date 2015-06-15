@@ -16,6 +16,7 @@ var config = require('./config');
 
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/todo';
 mongoose.connect(config.database);
+app.set('superSecret', config.secret); // secret variable
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,8 +25,9 @@ app.set('view engine', 'jade');
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
+
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

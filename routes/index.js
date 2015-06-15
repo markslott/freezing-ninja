@@ -117,11 +117,12 @@ router.post('/v1/case', function(req, res) {
 	client.connect();
 	console.log(req.body);
 	console.log('contactid ' + req.body.contactid);
-	console.log('subject' + req.body.subject);
-	var query = client.query("INSERT INTO mycase(contactid, subject) values($1, $2)", [req.body.contactid, req.body.subject]);
+	console.log('subject ' + req.body.subject);
+	var query = client.query("INSERT INTO mycase(contactid, subject) values($1, $2)", [req.query.contactid, req.query.subject]);
     query.on("end", function (result) {          
         client.end(); 
         console.log('Insert Success');
+        return res.json(result);
     });  
 });
 
