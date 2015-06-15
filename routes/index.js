@@ -100,7 +100,7 @@ router.use(function(req, res, next) {
 // authenticated routes
 // ---------------------------------------------------------
 router.get('/', function(req, res) {
-	res.json({ message: 'Welcome to the coolest API on earth!' });
+	res.json({ message: 'Welcome to the coolest API on earth!  If you see this, you are authenticated' });
 });
 
 router.get('/users', function(req, res) {

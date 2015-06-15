@@ -14,7 +14,7 @@ var app = express();
 var User   = require('./models/user');
 var config = require('./config');
 
-var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/todo';
+var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/testdb1';
 mongoose.connect(config.database);
 app.set('superSecret', config.secret); // secret variable
 
@@ -36,12 +36,12 @@ app.use('/api', routes);
 app.get('/setup', function(req, res) {
 
   // create a sample user
-  var nick = new User({ 
+  var newUser = new User({ 
     name: 'Mark Lott', 
     password: 'password',
     admin: true 
   });
-  nick.save(function(err) {
+  newUser.save(function(err) {
     if (err) throw err;
 
     console.log('User saved successfully');
