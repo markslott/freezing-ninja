@@ -1,5 +1,4 @@
 var express = require('express');
-var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
@@ -9,6 +8,8 @@ var User   = require('./models/user'); // get our mongoose model
 var app = express();
 var router = express.Router();
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/fossildemo';
+
+
 
 /* https://github.com/scotch-io/node-token-authentication/blob/master/server.js#L17 */
 
@@ -21,6 +22,7 @@ app.set('superSecret', config.secret); // secret variable
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'html');
 
 
 app.get('/setup', function(req, res) {
