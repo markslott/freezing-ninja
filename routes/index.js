@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User   = require('../models/user')
 var jwt    = require('jsonwebtoken');
+var config = require('../config');
 
 // ---------------------------------------------------------
 // authentication (no middleware necessary since this isnt authenticated)
@@ -47,7 +48,7 @@ router.post('/authenticate', function(req, res) {
 	user = { name: 'Mark Lott',
 		     password: 'password'
 	}
-	var token = jwt.sign(user, app.get('superSecret'), {
+	var token = jwt.sign(user, config.secret, {
 		expiresInMinutes: 1440 // expires in 24 hours
 	});
 
