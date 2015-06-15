@@ -3,6 +3,7 @@ var router = express.Router();
 var User   = require('../models/user')
 var jwt    = require('jsonwebtoken');
 var config = require('../config');
+var pg = require('pg');
 
 // ---------------------------------------------------------
 // authentication (no middleware necessary since this isnt authenticated)
@@ -110,6 +111,29 @@ router.get('/users', function(req, res) {
 router.get('/check', function(req, res) {
 	res.json(req.decoded);
 });
+
+router.post('/v1/case', function(req, res) {
+	var data = {text: req.body.text, complete: false};
+	pg.connect(connectionString, function(err, client, done) {
+		//implement sql update here
+		client.query("INSERT INTO mycase(contactid, subject) values($1, $2)", [data.contactid, data.subject],
+			function(err, result) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log('row inserted with id: ' + result.rows[0].id);
+                }
+
+                client.end();
+            });  
+		);
+	}
+
+
+});
+
+
+
 
 
 module.exports = router;
