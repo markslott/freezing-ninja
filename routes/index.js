@@ -1,28 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User   = require('../models/user')
-
-router.get('/setup', function(req, res) {
-
-	// create a sample user
-	var nick = new User({ 
-		name: 'Mark Lott', 
-		password: 'password',
-		admin: true 
-	});
-	nick.save(function(err) {
-		if (err) throw err;
-
-		console.log('User saved successfully');
-		res.json({ success: true });
-	});
-});
-
-// basic route (http://localhost:8080)
-router.get('/test', function(req, res) {
-	res.send('Hello! welcome to my test api.');
-});
-
+var jwt    = require('jsonwebtoken');
 
 // ---------------------------------------------------------
 // authentication (no middleware necessary since this isnt authenticated)

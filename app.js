@@ -4,15 +4,18 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose    = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
-var User   = require('./models/user')
+var User   = require('./models/user');
+var config = require('./config');
 
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/todo';
+mongoose.connect(config.database);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,6 +30,27 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', routes);
+
+app.get('/setup', function(req, res) {
+
+  // create a sample user
+  var nick = new User({ 
+    name: 'Mark Lott', 
+    password: 'password',
+    admin: true 
+  });
+  nick.save(function(err) {
+    if (err) throw err;
+
+    console.log('User saved successfully');
+    res.json({ success: true });
+  });
+});
+
+// basic route (http://localhost:8080)
+app.get('/test', function(req, res) {
+  res.send('Hello! welcome to my test api.');
+});
 
 
 // catch 404 and forward to error handler
