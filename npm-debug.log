@@ -1,0 +1,335 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'body-parser',
+1 verbose cli   'jsonwebtoken' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose cache add [ 'body-parser', null ]
+5 verbose cache add name=undefined spec="body-parser" args=["body-parser",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'body-parser',
+6 verbose parsed url   path: 'body-parser',
+6 verbose parsed url   href: 'body-parser' }
+7 verbose cache add [ 'jsonwebtoken', null ]
+8 verbose cache add name=undefined spec="jsonwebtoken" args=["jsonwebtoken",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'jsonwebtoken',
+9 verbose parsed url   path: 'jsonwebtoken',
+9 verbose parsed url   href: 'jsonwebtoken' }
+10 silly lockFile 14cf125c-body-parser body-parser
+11 verbose lock body-parser /Users/mlott/.npm/14cf125c-body-parser.lock
+12 silly lockFile fb3a83e6-jsonwebtoken jsonwebtoken
+13 verbose lock jsonwebtoken /Users/mlott/.npm/fb3a83e6-jsonwebtoken.lock
+14 silly lockFile 14cf125c-body-parser body-parser
+15 silly lockFile 14cf125c-body-parser body-parser
+16 silly lockFile fb3a83e6-jsonwebtoken jsonwebtoken
+17 silly lockFile fb3a83e6-jsonwebtoken jsonwebtoken
+18 verbose addNamed [ 'body-parser', '' ]
+19 verbose addNamed [ null, '*' ]
+20 silly lockFile 9f665704-body-parser body-parser@
+21 verbose lock body-parser@ /Users/mlott/.npm/9f665704-body-parser.lock
+22 verbose addNamed [ 'jsonwebtoken', '' ]
+23 verbose addNamed [ null, '*' ]
+24 silly lockFile 500149be-jsonwebtoken jsonwebtoken@
+25 verbose lock jsonwebtoken@ /Users/mlott/.npm/500149be-jsonwebtoken.lock
+26 silly addNameRange { name: 'body-parser', range: '*', hasData: false }
+27 silly addNameRange { name: 'jsonwebtoken', range: '*', hasData: false }
+28 verbose request where is /jsonwebtoken
+29 verbose request registry https://registry.npmjs.org/
+30 verbose request id 3fb3c96c35db0619
+31 verbose url raw /jsonwebtoken
+32 verbose url resolving [ 'https://registry.npmjs.org/', './jsonwebtoken' ]
+33 verbose url resolved https://registry.npmjs.org/jsonwebtoken
+34 verbose request where is https://registry.npmjs.org/jsonwebtoken
+35 info trying registry request attempt 1 at 09:32:45
+36 http GET https://registry.npmjs.org/jsonwebtoken
+37 verbose request where is /body-parser
+38 verbose request registry https://registry.npmjs.org/
+39 verbose url raw /body-parser
+40 verbose url resolving [ 'https://registry.npmjs.org/', './body-parser' ]
+41 verbose url resolved https://registry.npmjs.org/body-parser
+42 verbose request where is https://registry.npmjs.org/body-parser
+43 info trying registry request attempt 1 at 09:32:46
+44 verbose etag "2PN79QATHF7IXE64B0UKCZCJ1"
+45 http GET https://registry.npmjs.org/body-parser
+46 http 304 https://registry.npmjs.org/body-parser
+47 silly registry.get cb [ 304,
+47 silly registry.get   { date: 'Mon, 15 Jun 2015 14:32:46 GMT',
+47 silly registry.get     via: '1.1 varnish',
+47 silly registry.get     'cache-control': 'max-age=60',
+47 silly registry.get     etag: '"2PN79QATHF7IXE64B0UKCZCJ1"',
+47 silly registry.get     age: '11',
+47 silly registry.get     connection: 'keep-alive',
+47 silly registry.get     'x-served-by': 'cache-sjc3120-SJC',
+47 silly registry.get     'x-cache': 'HIT',
+47 silly registry.get     'x-cache-hits': '1',
+47 silly registry.get     'x-timer': 'S1434378766.167106,VS0,VE0',
+47 silly registry.get     vary: 'Accept' } ]
+48 verbose etag https://registry.npmjs.org/body-parser from cache
+49 silly addNameRange number 2 { name: 'body-parser', range: '*', hasData: true }
+50 silly addNameRange versions [ 'body-parser',
+50 silly addNameRange   [ '1.0.0',
+50 silly addNameRange     '1.0.1',
+50 silly addNameRange     '1.0.2',
+50 silly addNameRange     '1.1.0',
+50 silly addNameRange     '1.1.1',
+50 silly addNameRange     '1.1.2',
+50 silly addNameRange     '1.2.0',
+50 silly addNameRange     '1.2.1',
+50 silly addNameRange     '1.2.2',
+50 silly addNameRange     '1.3.0',
+50 silly addNameRange     '1.3.1',
+50 silly addNameRange     '1.4.0',
+50 silly addNameRange     '1.4.1',
+50 silly addNameRange     '1.4.2',
+50 silly addNameRange     '1.4.3',
+50 silly addNameRange     '1.5.0',
+50 silly addNameRange     '1.5.1',
+50 silly addNameRange     '1.5.2',
+50 silly addNameRange     '1.6.0',
+50 silly addNameRange     '1.6.1',
+50 silly addNameRange     '1.6.2',
+50 silly addNameRange     '1.6.3',
+50 silly addNameRange     '1.6.4',
+50 silly addNameRange     '1.6.5',
+50 silly addNameRange     '1.6.6',
+50 silly addNameRange     '1.6.7',
+50 silly addNameRange     '1.7.0',
+50 silly addNameRange     '1.8.0',
+50 silly addNameRange     '1.8.1',
+50 silly addNameRange     '1.8.2',
+50 silly addNameRange     '1.8.3',
+50 silly addNameRange     '1.8.4',
+50 silly addNameRange     '1.9.0',
+50 silly addNameRange     '1.9.1',
+50 silly addNameRange     '1.9.2',
+50 silly addNameRange     '1.9.3',
+50 silly addNameRange     '1.10.0',
+50 silly addNameRange     '1.10.1',
+50 silly addNameRange     '1.10.2',
+50 silly addNameRange     '1.11.0',
+50 silly addNameRange     '1.12.0',
+50 silly addNameRange     '1.12.1',
+50 silly addNameRange     '1.12.2',
+50 silly addNameRange     '1.12.3',
+50 silly addNameRange     '1.12.4',
+50 silly addNameRange     '1.13.0' ] ]
+51 verbose addNamed [ 'body-parser', '1.13.0' ]
+52 verbose addNamed [ '1.13.0', '1.13.0' ]
+53 silly lockFile 44481822-body-parser-1-13-0 body-parser@1.13.0
+54 verbose lock body-parser@1.13.0 /Users/mlott/.npm/44481822-body-parser-1-13-0.lock
+55 silly lockFile f4c2d91b-dy-parser-body-parser-1-13-0-tgz https://registry.npmjs.org/body-parser/-/body-parser-1.13.0.tgz
+56 verbose lock https://registry.npmjs.org/body-parser/-/body-parser-1.13.0.tgz /Users/mlott/.npm/f4c2d91b-dy-parser-body-parser-1-13-0-tgz.lock
+57 verbose addRemoteTarball [ 'https://registry.npmjs.org/body-parser/-/body-parser-1.13.0.tgz',
+57 verbose addRemoteTarball   'b6dca73da8c4a9f68b0e64d29acac39dd3ad9a9e' ]
+58 info retry fetch attempt 1 at 09:32:46
+59 verbose fetch to= /var/folders/mj/nf03f0fs7jgctfjn2z82d1ymk6nr0d/T/npm-23835-tKagn1cn/registry.npmjs.org/body-parser/-/body-parser-1.13.0.tgz
+60 http GET https://registry.npmjs.org/body-parser/-/body-parser-1.13.0.tgz
+61 http 200 https://registry.npmjs.org/jsonwebtoken
+62 silly registry.get cb [ 200,
+62 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+62 silly registry.get     etag: '"D18HX384OZ0HJ62ZXGM2V0RB6"',
+62 silly registry.get     'content-type': 'application/json',
+62 silly registry.get     'cache-control': 'max-age=60',
+62 silly registry.get     'content-length': '41690',
+62 silly registry.get     'accept-ranges': 'bytes',
+62 silly registry.get     date: 'Mon, 15 Jun 2015 14:32:46 GMT',
+62 silly registry.get     via: '1.1 varnish',
+62 silly registry.get     age: '0',
+62 silly registry.get     connection: 'keep-alive',
+62 silly registry.get     'x-served-by': 'cache-sjc3120-SJC',
+62 silly registry.get     'x-cache': 'HIT',
+62 silly registry.get     'x-cache-hits': '1',
+62 silly registry.get     'x-timer': 'S1434378766.164353,VS0,VE84',
+62 silly registry.get     vary: 'Accept' } ]
+63 silly addNameRange number 2 { name: 'jsonwebtoken', range: '*', hasData: true }
+64 silly addNameRange versions [ 'jsonwebtoken',
+64 silly addNameRange   [ '0.1.0',
+64 silly addNameRange     '0.2.0',
+64 silly addNameRange     '0.3.0',
+64 silly addNameRange     '0.4.0',
+64 silly addNameRange     '0.4.1',
+64 silly addNameRange     '1.0.0',
+64 silly addNameRange     '1.0.2',
+64 silly addNameRange     '1.1.0',
+64 silly addNameRange     '1.1.1',
+64 silly addNameRange     '1.1.2',
+64 silly addNameRange     '1.2.0',
+64 silly addNameRange     '1.3.0',
+64 silly addNameRange     '2.0.0',
+64 silly addNameRange     '3.0.0',
+64 silly addNameRange     '3.1.0',
+64 silly addNameRange     '3.1.1',
+64 silly addNameRange     '3.2.0',
+64 silly addNameRange     '3.2.1',
+64 silly addNameRange     '3.2.2',
+64 silly addNameRange     '4.0.0',
+64 silly addNameRange     '4.1.0',
+64 silly addNameRange     '4.2.0',
+64 silly addNameRange     '4.2.1',
+64 silly addNameRange     '4.2.2',
+64 silly addNameRange     '5.0.0',
+64 silly addNameRange     '5.0.1',
+64 silly addNameRange     '5.0.2' ] ]
+65 verbose addNamed [ 'jsonwebtoken', '5.0.2' ]
+66 verbose addNamed [ '5.0.2', '5.0.2' ]
+67 silly lockFile 25d60b9f-jsonwebtoken-5-0-2 jsonwebtoken@5.0.2
+68 verbose lock jsonwebtoken@5.0.2 /Users/mlott/.npm/25d60b9f-jsonwebtoken-5-0-2.lock
+69 silly lockFile bb29de5b-nwebtoken-jsonwebtoken-5-0-2-tgz https://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-5.0.2.tgz
+70 verbose lock https://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-5.0.2.tgz /Users/mlott/.npm/bb29de5b-nwebtoken-jsonwebtoken-5-0-2-tgz.lock
+71 verbose addRemoteTarball [ 'https://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-5.0.2.tgz',
+71 verbose addRemoteTarball   'c5d9c6130a1270271306c4bab65934ef8ae4f993' ]
+72 info retry fetch attempt 1 at 09:32:46
+73 verbose fetch to= /var/folders/mj/nf03f0fs7jgctfjn2z82d1ymk6nr0d/T/npm-23835-tKagn1cn/registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-5.0.2.tgz
+74 http GET https://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-5.0.2.tgz
+75 http 200 https://registry.npmjs.org/body-parser/-/body-parser-1.13.0.tgz
+76 silly lockFile f4c2d91b-dy-parser-body-parser-1-13-0-tgz https://registry.npmjs.org/body-parser/-/body-parser-1.13.0.tgz
+77 silly lockFile f4c2d91b-dy-parser-body-parser-1-13-0-tgz https://registry.npmjs.org/body-parser/-/body-parser-1.13.0.tgz
+78 silly lockFile 44481822-body-parser-1-13-0 body-parser@1.13.0
+79 silly lockFile 44481822-body-parser-1-13-0 body-parser@1.13.0
+80 silly lockFile 9f665704-body-parser body-parser@
+81 silly lockFile 9f665704-body-parser body-parser@
+82 http 200 https://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-5.0.2.tgz
+83 silly lockFile bb29de5b-nwebtoken-jsonwebtoken-5-0-2-tgz https://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-5.0.2.tgz
+84 silly lockFile bb29de5b-nwebtoken-jsonwebtoken-5-0-2-tgz https://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-5.0.2.tgz
+85 silly lockFile 25d60b9f-jsonwebtoken-5-0-2 jsonwebtoken@5.0.2
+86 silly lockFile 25d60b9f-jsonwebtoken-5-0-2 jsonwebtoken@5.0.2
+87 silly lockFile 500149be-jsonwebtoken jsonwebtoken@
+88 silly lockFile 500149be-jsonwebtoken jsonwebtoken@
+89 silly resolved [ { name: 'body-parser',
+89 silly resolved     description: 'Node.js body parsing middleware',
+89 silly resolved     version: '1.13.0',
+89 silly resolved     contributors: [ [Object], [Object] ],
+89 silly resolved     license: 'MIT',
+89 silly resolved     repository: { type: 'git', url: 'https://github.com/expressjs/body-parser' },
+89 silly resolved     dependencies:
+89 silly resolved      { bytes: '2.1.0',
+89 silly resolved        'content-type': '~1.0.1',
+89 silly resolved        debug: '~2.2.0',
+89 silly resolved        depd: '~1.0.1',
+89 silly resolved        'http-errors': '~1.3.1',
+89 silly resolved        'iconv-lite': '0.4.10',
+89 silly resolved        'on-finished': '~2.3.0',
+89 silly resolved        qs: '3.1.0',
+89 silly resolved        'raw-body': '~2.1.1',
+89 silly resolved        'type-is': '~1.6.3' },
+89 silly resolved     devDependencies:
+89 silly resolved      { istanbul: '0.3.9',
+89 silly resolved        methods: '~1.1.1',
+89 silly resolved        mocha: '2.2.5',
+89 silly resolved        supertest: '1.0.1' },
+89 silly resolved     files: [ 'lib/', 'LICENSE', 'HISTORY.md', 'index.js' ],
+89 silly resolved     engines: { node: '>= 0.8' },
+89 silly resolved     scripts:
+89 silly resolved      { test: 'mocha --require test/support/env --reporter spec --check-leaks --bail test/',
+89 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter dot --check-leaks test/',
+89 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/' },
+89 silly resolved     gitHead: 'aa8617b3893300ad52cb19d279ef62ccc99c1394',
+89 silly resolved     bugs: { url: 'https://github.com/expressjs/body-parser/issues' },
+89 silly resolved     homepage: 'https://github.com/expressjs/body-parser',
+89 silly resolved     _id: 'body-parser@1.13.0',
+89 silly resolved     _shasum: 'b6dca73da8c4a9f68b0e64d29acac39dd3ad9a9e',
+89 silly resolved     _from: 'body-parser@',
+89 silly resolved     _npmVersion: '1.4.28',
+89 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+89 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+89 silly resolved     dist:
+89 silly resolved      { shasum: 'b6dca73da8c4a9f68b0e64d29acac39dd3ad9a9e',
+89 silly resolved        tarball: 'http://registry.npmjs.org/body-parser/-/body-parser-1.13.0.tgz' },
+89 silly resolved     directories: {},
+89 silly resolved     _resolved: 'https://registry.npmjs.org/body-parser/-/body-parser-1.13.0.tgz' },
+89 silly resolved   { name: 'jsonwebtoken',
+89 silly resolved     version: '5.0.2',
+89 silly resolved     description: 'JSON Web Token implementation (symmetric and asymmetric)',
+89 silly resolved     main: 'index.js',
+89 silly resolved     scripts: { test: 'mocha' },
+89 silly resolved     repository:
+89 silly resolved      { type: 'git',
+89 silly resolved        url: 'git+https://github.com/auth0/node-jsonwebtoken.git' },
+89 silly resolved     keywords: [ 'jwt' ],
+89 silly resolved     author: { name: 'auth0' },
+89 silly resolved     license: 'MIT',
+89 silly resolved     bugs: { url: 'https://github.com/auth0/node-jsonwebtoken/issues' },
+89 silly resolved     dependencies: { jws: '^3.0.0' },
+89 silly resolved     devDependencies: { atob: '^1.1.2', chai: '^1.10.0', mocha: '^2.1.0' },
+89 silly resolved     engines: { npm: '>=1.4.28' },
+89 silly resolved     gitHead: '118ff1a7baf22d67852a2e0d67e6f01a782418f3',
+89 silly resolved     homepage: 'https://github.com/auth0/node-jsonwebtoken#readme',
+89 silly resolved     _id: 'jsonwebtoken@5.0.2',
+89 silly resolved     _shasum: 'c5d9c6130a1270271306c4bab65934ef8ae4f993',
+89 silly resolved     _from: 'jsonwebtoken@',
+89 silly resolved     _npmVersion: '2.10.1',
+89 silly resolved     _nodeVersion: '0.12.4',
+89 silly resolved     _npmUser: { name: 'jfromaniello', email: 'jfromaniello@gmail.com' },
+89 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+89 silly resolved     dist:
+89 silly resolved      { shasum: 'c5d9c6130a1270271306c4bab65934ef8ae4f993',
+89 silly resolved        tarball: 'http://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-5.0.2.tgz' },
+89 silly resolved     directories: {},
+89 silly resolved     _resolved: 'https://registry.npmjs.org/jsonwebtoken/-/jsonwebtoken-5.0.2.tgz' } ]
+90 info install body-parser@1.13.0 into /usr/local/lib
+91 info install jsonwebtoken@5.0.2 into /usr/local/lib
+92 info installOne body-parser@1.13.0
+93 info installOne jsonwebtoken@5.0.2
+94 verbose lib/node_modules/jsonwebtoken unbuild
+95 verbose lib/node_modules/body-parser unbuild
+96 verbose tar unpack /Users/mlott/.npm/jsonwebtoken/5.0.2/package.tgz
+97 silly lockFile 3bb205c1-al-lib-node-modules-jsonwebtoken tar:///usr/local/lib/node_modules/jsonwebtoken
+98 verbose lock tar:///usr/local/lib/node_modules/jsonwebtoken /Users/mlott/.npm/3bb205c1-al-lib-node-modules-jsonwebtoken.lock
+99 silly lockFile 82003878-m-jsonwebtoken-5-0-2-package-tgz tar:///Users/mlott/.npm/jsonwebtoken/5.0.2/package.tgz
+100 verbose lock tar:///Users/mlott/.npm/jsonwebtoken/5.0.2/package.tgz /Users/mlott/.npm/82003878-m-jsonwebtoken-5-0-2-package-tgz.lock
+101 verbose tar unpack /Users/mlott/.npm/body-parser/1.13.0/package.tgz
+102 silly lockFile bbb8aa39-cal-lib-node-modules-body-parser tar:///usr/local/lib/node_modules/body-parser
+103 verbose lock tar:///usr/local/lib/node_modules/body-parser /Users/mlott/.npm/bbb8aa39-cal-lib-node-modules-body-parser.lock
+104 silly lockFile d4679fde-m-body-parser-1-13-0-package-tgz tar:///Users/mlott/.npm/body-parser/1.13.0/package.tgz
+105 verbose lock tar:///Users/mlott/.npm/body-parser/1.13.0/package.tgz /Users/mlott/.npm/d4679fde-m-body-parser-1-13-0-package-tgz.lock
+106 silly gunzTarPerm modes [ '755', '644' ]
+107 silly gunzTarPerm modes [ '755', '644' ]
+108 error Error: EACCES, mkdir '/usr/local/lib/node_modules/jsonwebtoken'
+108 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/jsonwebtoken']
+108 error   errno: 3,
+108 error   code: 'EACCES',
+108 error   path: '/usr/local/lib/node_modules/jsonwebtoken',
+108 error   fstream_type: 'Directory',
+108 error   fstream_path: '/usr/local/lib/node_modules/jsonwebtoken',
+108 error   fstream_class: 'DirWriter',
+108 error   fstream_stack:
+108 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+108 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+108 error      'Object.oncomplete (fs.js:107:15)' ] }
+109 error Please try running this command again as root/Administrator.
+110 error System Darwin 14.3.0
+111 error command "node" "/usr/local/bin/npm" "install" "-g" "body-parser" "jsonwebtoken"
+112 error cwd /Users/mlott/Development/node-fossil-api
+113 error node -v v0.10.33
+114 error npm -v 1.4.28
+115 error path /usr/local/lib/node_modules/jsonwebtoken
+116 error fstream_path /usr/local/lib/node_modules/jsonwebtoken
+117 error fstream_type Directory
+118 error fstream_class DirWriter
+119 error code EACCES
+120 error errno 3
+121 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/jsonwebtoken'
+122 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+122 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+122 error fstream_stack Object.oncomplete (fs.js:107:15)
+123 verbose exit [ 3, true ]
