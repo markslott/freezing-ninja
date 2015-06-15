@@ -116,8 +116,8 @@ router.post('/v1/case', function(req, res) {
 	var client = new pg.Client(process.env.DATABASE_URL);
 	client.connect();
 	console.log(req.body);
-	console.log('contactid ' = req.body.contactid);
-	console.log('subject' = req.body.subject);
+	console.log('contactid ' + req.body.contactid);
+	console.log('subject' + req.body.subject);
 	var query = client.query("INSERT INTO mycase(contactid, subject) values($1, $2)", [req.body.contactid, req.body.subject]);
     query.on("end", function (result) {          
         client.end(); 
