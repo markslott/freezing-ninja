@@ -1,6 +1,8 @@
 var express = require('express');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var path = require('path');
+var favicon = require('serve-favicon');
 var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var mongoose  = require('mongoose');
 var config = require('./config'); // get our config file
