@@ -18,5 +18,5 @@
   "devDependencies": {},
   "author": "",
   "license": "ISC",
-  "engine": "node 0.10.33"
+  "engine": "node = 0.10.33"
 }
