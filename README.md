@@ -33,4 +33,17 @@ published
 	  "subject" : "A subject description"}
 - make sure the Content-Type header is still set to application/json
 - add an additonal header called x-access-token and set the value to the token that was returned
-- You should get a message back indicating that a row was inserted.  Check your postgres DB to see if it is there.
+- You should get a message back indicating that a row was inserted:
+
+	{
+	    "command": "INSERT",
+	    "rowCount": 1,
+	    "oid": 0,
+	    "rows": [],
+	    "fields": [],
+	    "_parsers": [],
+	    "RowCtor": null,
+	    "rowAsArray": false
+	}
+
+- check your postgresdb to see if it is there
