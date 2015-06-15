@@ -1,18 +1,12 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
 var logger = require('morgan');
-var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var mongoose  = require('mongoose');
-
 var config = require('./config'); // get our config file
-
 var User   = require('./models/user'); // get our mongoose model
-
 var app = express();
-
 var router = express.Router();
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/fossildemo';
 
@@ -27,7 +21,7 @@ app.set('superSecret', config.secret); // secret variable
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+
 
 app.get('/setup', function(req, res) {
 
