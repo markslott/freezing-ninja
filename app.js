@@ -37,12 +37,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/setup', function(req, res) {
 
   // create a sample user
-  var nick = new User({ 
-    name: 'Nick Cerminara', 
+  var mark = new User({ 
+    name: 'Mark Lott', 
     password: 'password',
     admin: true 
   });
-  nick.save(function(err) {
+  mark.save(function(err) {
     if (err) throw err;
 
     console.log('User saved successfully');
