@@ -22,7 +22,6 @@ app.set('superSecret', config.secret); // secret variable
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.set('view engine', 'html');
 
 
 app.get('/setup', function(req, res) {
@@ -46,36 +45,6 @@ app.get('/', function(req, res) {
   res.send('Hello, from the API!');
 });
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
-
-// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
-});
 
 // ---------------------------------------------------------
 // authentication (no middleware necessary since this isnt authenticated)
@@ -205,5 +174,9 @@ router.get('/check', function(req, res) {
 
 app.use('/api',router);
 
+app.listen(port);
+
+console.log(app._router.stack);
+console.log(router.stack);
 
 module.exports = app;
