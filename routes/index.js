@@ -44,6 +44,9 @@ router.post('/authenticate', function(req, res) {
 
 	});
 */
+	user = { name: 'Mark Lott',
+		     password: 'password'
+	}
 	var token = jwt.sign(user, app.get('superSecret'), {
 		expiresInMinutes: 1440 // expires in 24 hours
 	});
