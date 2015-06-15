@@ -12,7 +12,7 @@ var pg = require('pg');
 router.post('/authenticate', function(req, res) {
 	console.log('authenticate user ' + req.body.name + " / " + req.body.password);
 	// find the user
-	/*
+	
 	User.findOne({
 		name: req.body.name
 	}, function(err, user) {
@@ -45,7 +45,7 @@ router.post('/authenticate', function(req, res) {
 		
 
 	});
-*/
+    /*
 	user = { name: 'Mark Lott',
 		     password: 'password'
 	}
@@ -58,6 +58,7 @@ router.post('/authenticate', function(req, res) {
 		message: 'Enjoy your token!',
 		token: token
 	});
+    */
 });
 
 // ---------------------------------------------------------
