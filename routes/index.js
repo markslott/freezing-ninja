@@ -113,10 +113,9 @@ router.get('/check', function(req, res) {
 });
 
 router.post('/v1/case', function(req, res) {
-	var data = req.body.text;
 	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
 		//implement sql update here
-		client.query("INSERT INTO mycase(contactid, subject) values($1, $2)", [data.contactid, data.subject],
+		client.query("INSERT INTO mycase(contactid, subject) values($1, $2)", [req.body.contactid, req.body.subject],
 			function(err, result) {
                 if (err) {
                     console.log(err);
