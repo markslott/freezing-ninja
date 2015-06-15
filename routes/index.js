@@ -8,8 +8,9 @@ var jwt    = require('jsonwebtoken');
 // ---------------------------------------------------------
 // http://localhost:8080/api/authenticate
 router.post('/authenticate', function(req, res) {
-
+	console.log('authenticate user ' + req.body.name + " / " + req.body.password);
 	// find the user
+	/*
 	User.findOne({
 		name: req.body.name
 	}, function(err, user) {
@@ -39,7 +40,18 @@ router.post('/authenticate', function(req, res) {
 			}		
 
 		}
+		
 
+	});
+*/
+	var token = jwt.sign(user, app.get('superSecret'), {
+		expiresInMinutes: 1440 // expires in 24 hours
+	});
+
+	res.json({
+		success: true,
+		message: 'Enjoy your token!',
+		token: token
 	});
 });
 
