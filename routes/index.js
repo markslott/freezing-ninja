@@ -126,8 +126,7 @@ router.post('/v1/case', function(req, res) {
 
                 client.end();
             });  
-		);
-	}
+	});
 
 
 });
